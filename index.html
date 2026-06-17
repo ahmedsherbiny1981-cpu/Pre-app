@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>تنزيل التطبيق</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // إذا كان الجهاز آيفون أو آيباد
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/eg/app/pre-group/id6753228947";
+            }
+            // إذا كان الجهاز أندرويد
+            else if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.pregroup.app";
+            }
+            // إذا فتح من كمبيوتر أو جهاز آخر (صفحة احتياطية)
+            else {
+                window.location.href = "https://pregroup-eg.com/about-us/";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p style="text-align:center; font-family:sans-serif; margin-top:50px;">جاري توجيهك إلى المتجر المناسب لجهازك...</p>
+</body>
+</html>
